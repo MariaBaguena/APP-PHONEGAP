@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.css">
+<link rel="stylesheet" type="text/css" href="app.css">
+<script type="text/javascript" src="jquery-2.2.4.js"></script>
+<script type="text/javascript" src="code.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.4.5.js"></script>
+
+<!-- Fuentes -->
+ 
+<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+
+    <title>Hello World</title>
+</head>
+
+<body>
+    <!-- Página principal -->
+
+	<div data-role="page" id="main" data-theme="c">
+
+			<!-- <a href="#CityPage" data-role="button" data-icon="arrow-r" data-iconpos="notext" data-theme="c"></a> -->
+			
+			<div data-role="header" class="header" >
+				<h3> Principal</h3>
+				<a href="#CityPage" id="btn"><img src="images/menu.png"></a>
+			</div>
+			
+			<div data-role="main">
+				<div id="NombreCiudad"></div>
+				<div id="Weather"></div>
+				<div id="Temperature"></div>
+				<div id="Icon"></div>
+				
+
+				</div>
+
+			</div>
+
+			
+	</div>
+
+
+	<!--  Página ciudades -->
+
+	<!--<div data-role="page" id="CityPage" data-theme="c">-->
+	<div data-role="page" id="CityPage" data-theme="c">
+
+		<div data-role="header" class="header" >
+			<h3> Lista de ciudades</h3>
+			<a href="#Search" id="btn"><img src="images/plus-symbol.png"></a>
+			<a href="#main" id="btn2"><img src="images/arrow_r.png"></a>
+			<!-- <a href="#Search" data-role="button" data-iconpos="notext" data-theme="c">Añadir</a>-->
+		</div>
+
+		<div data-role="main">
+			
+			<ul data-role="listview" id="ciudades">
+				
+			</ul> 
+
+		</div>
+		
+	</div>
+
+
+
+	<!-- Página buscar -->
+
+	<div data-role="page" id="Search">
+
+
+			<div data-role="header" class="header">
+				<h3>Introduce una ciudad</h3>
+				<a href="#CityPage" id="btn"><img src="images/Arrow.png"></a>
+				<!--<a href="#CityPage" data-role="button" data-iconpos="notext" data-theme="c">volver</a>-->
+
+			</div>
+			
+		
+			 <div id="buscador" data-role="main">
+
+				<form class="ui-filterable">
+					<input id="autocomplete-input" data-type="search" placeholder="Busca una ciudad...">
+				</form>
+				<ul data-role="listview" id="autocomplete" data-inset="true" data-input="#autocomplete-input" data-filter="true"></ul>
+
+			</div> 
+
+	</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
